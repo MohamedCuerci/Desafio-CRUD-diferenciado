@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="users" class="container">
+  <%= form_with url: users_path, method: :get, data: { turbo_frame: 'search', controller: 'search', action: 'keyup->search#perform' } do |f| %>
+    <%= f.label "Search:" %>
+    <%= f.text_field :query %>
+  <% end %>
+
+  <h1 class="text-center">Champion List</h1>
+  <%= link_to "New user", new_user_path %>
+
+  <%= render "users_table", users: @users %>
+
+  <%== pagy_nav(@pagy) %>
+
+</div>
