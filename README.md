@@ -1,8 +1,8 @@
 # Desafio - CRUD com uma Busca Legal :)
 
-[link do desafio:](https://dev.to/zanfranceschi/desafio-crud-com-uma-busca-legal--425k)
+[link do desafio](https://dev.to/zanfranceschi/desafio-crud-com-uma-busca-legal--425k)
 
-__descrição do projeto__
+## descrição do projeto
 
 - [x] Crie uma busca de apenas um campo no seu CRUD que busque em mais de uma coluna da tabela. É uma busca de um campo só!
 
