@@ -4,8 +4,7 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     if params[:query].present?
-      @query = params[:query]
-      @users = User.where("name LIKE ? OR address LIKE ? OR phrase LIKE ? OR ranking LIKE ?  OR spell LIKE ?", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%")
+      @users = User.queryAll(params[:query])
     else
       @pagy, @users = pagy(User.all)
     end
